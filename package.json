@@ -1,6 +1,6 @@
 {
   "name": "@whitetrefoil/vue-elem-id",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A tiny plugin to help generate dynamic element ID in Vue",
   "main": "lib/common/main.js",
   "module": "lib/esm/main.js",

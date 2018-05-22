@@ -28,6 +28,11 @@ Vue.use(VueElemId)
 Changelog
 ---------
 
+### v1.1.0
+
+* Add LICENSE file to publish this in proper license.
+* Add Travis CI.
+
 ### v1.0.0
 
 * Initial release.
