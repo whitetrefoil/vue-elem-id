@@ -1,7 +1,7 @@
 @whitetrefoil/vue-elem-id
 ==========
 
-[![Build Status](https://travis-ci.org/whitetrefoil/vue-elem-id.svg?branch=master)](https://travis-ci.org/whitetrefoil/vue-elem-id)
+[![Build Status](https://travis-ci.org/whitetrefoil/vue-elem-id.svg?branch=master)](https://travis-ci.org/whitetrefoil/vue-elem-id) [![npm version](https://badge.fury.io/js/%40whitetrefoil%2Fvue-elem-id.svg)](https://badge.fury.io/js/%40whitetrefoil%2Fvue-elem-id)
 
 A tiny plugin to help generate dynamic element ID in Vue.
 Useful with labels and form inputs.
