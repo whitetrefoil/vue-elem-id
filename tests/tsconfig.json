@@ -1,0 +1,14 @@
+{
+  "extends"        : "../tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib"   : ["es2017"],
+    "outDir": "../.building",
+    "target": "es2017"
+  },
+  "include"        : [
+    "**/*.ts",
+    "../src/**/*.ts",
+    "../declarations/*.d.ts"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "name": "@whitetrefoil/vue-elem-id",
+  "version": "1.0.0",
+  "description": "A tiny plugin to help generate dynamic element ID in Vue",
+  "main": "lib/common/main.js",
+  "module": "lib/esm/main.js",
+  "typings": "lib/types/main.d.ts",
+  "scripts": {
+    "prepublishOnly": "node scripts/prepublish-checklist.js && npm run build",
+    "build": "rimraf lib && tsc && tsc -p tsconfig.common.json",
+    "publish": "echo \"Done publishing, don't forget to:\n  1. **dist-tag** your channel in npm.\n  2. bump version in package.json\nGood luck with the publish ;)\"",
+    "test": "tslint -p . && jest --no-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whitetrefoil/vue-elem-id.git"
+  },
+  "keywords": [
+    "vue",
+    "id",
+    "element",
+    "form"
+  ],
+  "author": "WhiteTrefoil <whitetrefoil@gmail.com>",
+  "license": "CC0-1.0",
+  "files": [
+    "lib/**/*.js",
+    "lib/types/**/*.d.ts",
+    "README.md"
+  ],
+  "directories": {
+    "test": "tests"
+  },
+  "bugs": {
+    "url": "https://github.com/whitetrefoil/vue-elem-id/issues"
+  },
+  "homepage": "https://github.com/whitetrefoil/vue-elem-id#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "shortid": "^2.2.8",
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^10.1.0",
+    "@types/shortid": "0.0.29",
+    "@whitetrefoil/check-dependencies": "^0.1.2",
+    "jest": "^23.0.0-charlie.2",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.6",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,js}",
+      "!**/*.d.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/~.*"
+    ],
+    "coverageDirectory": "test_results",
+    "coverageReporters": [
+      "clover",
+      "lcov",
+      "text-summary"
+    ],
+    "globals": {
+      "ts-jest": {
+        "skipBabel": false
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "moduleNameMapper": {},
+    "setupFiles": [],
+    "testRegex": "(/__tests__/.*|(\\.|/)spec)\\.(js|ts)$",
+    "transform": {
+      ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    }
+  }
+}
