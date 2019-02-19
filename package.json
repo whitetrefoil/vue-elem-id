@@ -6,6 +6,7 @@
   "module": "lib/esm/main.js",
   "typings": "lib/types/main.d.ts",
   "scripts": {
+    "clean": "rimraf lib test_results .building",
     "prepublishOnly": "node scripts/prepublish-checklist.js && npm run build",
     "build": "rimraf lib && tsc && tsc -p tsconfig.common.json",
     "publish": "echo \"Done publishing, don't forget to:\n  1. **dist-tag** your channel in npm.\n  2. bump version in package.json\nGood luck with the publish ;)\"",
@@ -43,16 +44,16 @@
     "vue": "^2.5.16"
   },
   "devDependencies": {
-    "@types/jest": "^22.2.3",
-    "@types/node": "^10.1.0",
+    "@types/jest": "^24.0.6",
+    "@types/node": "^11.9.4",
     "@types/shortid": "0.0.29",
     "@whitetrefoil/check-dependencies": "^0.1.2",
-    "jest": "^23.0.0-charlie.2",
+    "jest": "^24.1.0",
     "rimraf": "^2.6.2",
-    "ts-jest": "^22.4.6",
-    "ts-node": "^6.0.3",
+    "ts-jest": "^24.0.0",
+    "ts-node": "^8.0.2",
     "tslint": "^5.10.0",
-    "typescript": "^2.8.3"
+    "typescript": "^3.3.3"
   },
   "jest": {
     "collectCoverage": true,
@@ -71,7 +72,8 @@
     ],
     "globals": {
       "ts-jest": {
-        "skipBabel": false
+        "babelConfig": true,
+        "tsConfig": "tests/tsconfig.json"
       }
     },
     "moduleFileExtensions": [
@@ -83,7 +85,9 @@
     "setupFiles": [],
     "testRegex": "(/__tests__/.*|(\\.|/)spec)\\.(js|ts)$",
     "transform": {
-      ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
+      ".ts": "ts-jest"
+    },
+    "preset": "ts-jest",
+    "testMatch": null
   }
 }
