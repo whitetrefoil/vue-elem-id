@@ -17,7 +17,7 @@ const VueElemId = {
 
     V.prototype.$eid = function $elemId(name: string) {
       if (this.$$eids[name] == null) {
-        this.$$eids[name] = generate()
+        this.$$eids[name] = `eid${generate()}`
       }
       return this.$$eids[name]
     }
