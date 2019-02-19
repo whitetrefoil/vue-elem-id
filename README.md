@@ -28,6 +28,12 @@ Vue.use(VueElemId)
 Changelog
 ---------
 
+### v2.0.0
+
+* Prefix with "eid" to prevent IDs start with digit.
+* Migrate to yarn.
+* Upgrade some dependencies.
+
 ### v1.1.0
 
 * Add LICENSE file to publish this in proper license.
