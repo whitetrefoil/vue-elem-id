@@ -28,6 +28,10 @@ Vue.use(VueElemId)
 Changelog
 ---------
 
+### v2.0.1
+
+* Fix wrong version number in "package.json".
+
 ### v2.0.0
 
 * Prefix with "eid" to prevent IDs start with digit.
